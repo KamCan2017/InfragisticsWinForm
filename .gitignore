@@ -3,3 +3,14 @@
 ################################################################################
 
 /WinFormsMod/obj/Debug
+/.vs/InfragisticsWinForm/v15
+/.vs/WinFormsMod/v15/Server/sqlite3
+/bin/Debug
+/Common/bin/Debug
+/Common/obj/Debug
+/Domain.Database/bin/Debug
+/Settings/obj
+/Suppliers/obj
+/Domain.Database/obj/Debug
+/Customers/obj/Debug
+/.vs/WinFormsMod/v15
