@@ -45,6 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.Controls.Add(this.label1);
             this.Name = "SettingsView";
             this.Size = new System.Drawing.Size(1099, 516);

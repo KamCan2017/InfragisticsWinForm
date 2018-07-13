@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinTabControl.UltraTab ultraTab3 = new Infragistics.Win.UltraWinTabControl.UltraTab();
@@ -50,17 +50,17 @@
             this.ultraTabPageControl3.Controls.Add(this.ultraTilePanel1);
             this.ultraTabPageControl3.Location = new System.Drawing.Point(24, 1);
             this.ultraTabPageControl3.Name = "ultraTabPageControl3";
-            this.ultraTabPageControl3.Size = new System.Drawing.Size(1083, 446);
+            this.ultraTabPageControl3.Size = new System.Drawing.Size(1082, 483);
             // 
             // ultraTilePanel1
             // 
-            appearance1.BackColor = System.Drawing.Color.Thistle;
-            this.ultraTilePanel1.Appearance = appearance1;
+            appearance6.BackColor = System.Drawing.Color.Thistle;
+            this.ultraTilePanel1.Appearance = appearance6;
             this.ultraTilePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ultraTilePanel1.Location = new System.Drawing.Point(0, 0);
             this.ultraTilePanel1.Name = "ultraTilePanel1";
             this.ultraTilePanel1.NormalModeDimensions = new System.Drawing.Size(0, 0);
-            this.ultraTilePanel1.Size = new System.Drawing.Size(1083, 446);
+            this.ultraTilePanel1.Size = new System.Drawing.Size(1082, 483);
             this.ultraTilePanel1.TabIndex = 0;
             // 
             // ultraTabControl1
@@ -75,7 +75,7 @@
             this.ultraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.ultraTabControl1.Name = "ultraTabControl1";
             this.ultraTabControl1.SharedControlsPage = this.ultraTabSharedControlsPage1;
-            this.ultraTabControl1.Size = new System.Drawing.Size(1110, 450);
+            this.ultraTabControl1.Size = new System.Drawing.Size(1109, 487);
             this.ultraTabControl1.TabIndex = 0;
             this.ultraTabControl1.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.LeftTop;
             appearance4.BackColor = System.Drawing.Color.Thistle;
@@ -93,16 +93,16 @@
             // 
             this.ultraTabSharedControlsPage1.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabSharedControlsPage1.Name = "ultraTabSharedControlsPage1";
-            this.ultraTabSharedControlsPage1.Size = new System.Drawing.Size(1083, 446);
+            this.ultraTabSharedControlsPage1.Size = new System.Drawing.Size(1082, 483);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 450);
+            this.ClientSize = new System.Drawing.Size(1109, 487);
             this.Controls.Add(this.ultraTabControl1);
             this.Name = "MainForm";
-            this.Text = "WinFormMod";
+            this.Text = "Customizing App";
             this.ultraTabPageControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ultraTilePanel1)).EndInit();
             this.ultraTilePanel1.ResumeLayout(false);

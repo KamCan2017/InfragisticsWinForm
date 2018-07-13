@@ -8,14 +8,19 @@ namespace Suppliers
 {
     public class Module: IEmbeddedModule
     {
+
+        public Module()
+        {
+            View = new SuppliersView();
+        }
+
         public string Name { get { return "Suppliers"; } }
 
         public UserControl View
         {
-            get
-            {
-                return new SuppliersView();
-            }
+            get;
+
+            private set;
         }
 
         public Image Logo 

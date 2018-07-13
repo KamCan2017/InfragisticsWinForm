@@ -11,15 +11,26 @@ namespace WinFormsMod
         public MainForm()
         {
             InitializeComponent();
+            Icon = new Icon("buying.ico");
+            ultraTabControl1.SelectedTabChanged += UltraTabControl1_SelectedTabChanged;
+        }
+
+        private void UltraTabControl1_SelectedTabChanged(object sender, SelectedTabChangedEventArgs e)
+        {
+            if(e.PreviousSelectedTab != null)
+              e.PreviousSelectedTab.Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.False;
+
+            if (e.Tab != null)
+              e.Tab.Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.True;
         }
 
         public void AddModule(IEmbeddedModule module)
         {
             if (module == null)
-                return;  
-            
+                return;
+
             //Add a new tabpage for the module
-            var tab = new UltraTab();            
+            var tab = new UltraTab();
             UltraTabPageControl tabControl = new UltraTabPageControl();
             tab.TabPage = tabControl;
             tab.Text = module.Name;
@@ -40,7 +51,7 @@ namespace WinFormsMod
             var tile = new UltraTile(module.Name);
             tile.Settings.Appearance.BackColor = Color.Lavender;
             tile.MaximumSize = new Size(300, 200);
-            
+
             var pictureBox = new PictureBox() { Image = module.Logo, SizeMode = PictureBoxSizeMode.CenterImage };
             tile.Control = pictureBox;
             pictureBox.Dock = DockStyle.Fill;
@@ -49,7 +60,7 @@ namespace WinFormsMod
             {
                 tab.Selected = true;
             };
-            ultraTilePanel1.Tiles.Add(tile);           
+            ultraTilePanel1.Tiles.Add(tile);
         }
     }
 }

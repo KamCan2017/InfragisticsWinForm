@@ -46,9 +46,10 @@
             // 
             // ultraGrid1
             // 
-            appearance1.BackColor = System.Drawing.Color.MistyRose;
+            appearance1.BackColor = System.Drawing.Color.Thistle;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
+            this.ultraGrid1.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.ultraGrid1.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
             appearance2.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -104,19 +105,18 @@
             this.ultraGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ultraGrid1.Location = new System.Drawing.Point(0, 0);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(1128, 509);
-            this.ultraGrid1.TabIndex = 0;
+            this.ultraGrid1.Size = new System.Drawing.Size(1140, 509);
+            this.ultraGrid1.TabIndex = 3;
             this.ultraGrid1.Text = "ultraGrid1";
             // 
             // SuppliersView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.ultraGrid1);
             this.Name = "SuppliersView";
-            this.Size = new System.Drawing.Size(1128, 509);
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Size = new System.Drawing.Size(1140, 509);
             this.Load += new System.EventHandler(this.SuppliersView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
             this.ResumeLayout(false);

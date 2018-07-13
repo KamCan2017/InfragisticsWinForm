@@ -8,16 +8,20 @@ namespace Customers
 {
     public class Module: IEmbeddedModule
     {
+
+        public Module()
+        {
+            View = new CustomersView();
+        }
+
         public string Name { get { return "Customers"; } }
 
         public UserControl View
         {
-            get
-            {
-                return new CustomersView();
-            }
-        }
+            get;
 
+            private set;
+        }       
         public Image Logo
         {
             get

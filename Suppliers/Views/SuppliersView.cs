@@ -15,7 +15,7 @@ namespace Suppliers.Views
 
         private async void SuppliersView_Load(object sender, EventArgs e)
         {
-            ultraGrid1.DataSource = await supppliersLogic.LoadSuppliers();
+            ultraGrid1.DataSource = await supppliersLogic.LoadSuppliers();            
         }       
     }
 }

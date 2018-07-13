@@ -8,14 +8,18 @@ namespace Settings
 {
     public class Module: IEmbeddedModule
     {
+        public Module()
+        {
+            View = new SettingsView();
+        }
+
         public string Name { get { return "Settings"; } }
 
         public UserControl View
         {
-            get
-            {
-                return new SettingsView();
-            }
+            get;
+
+            private set;
         }
 
         public Image Logo 
