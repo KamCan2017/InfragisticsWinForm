@@ -4,29 +4,14 @@ using Infragistics.Win.UltraWinTabControl;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace WinFormsMod
+namespace WinFormsMod.Logic
 {
-    public partial class MainForm : Form
+    public class MainFormLogic
     {
-        public MainForm()
-        {
-            InitializeComponent();
-            Icon = new Icon("buying.ico");
-            ultraTabControl1.SelectedTabChanged += UltraTabControl1_SelectedTabChanged;
-        }
 
-        private void UltraTabControl1_SelectedTabChanged(object sender, SelectedTabChangedEventArgs e)
+        public void AddModule(IEmbeddedModule module, MainForm parent)
         {
-            if(e.PreviousSelectedTab != null)
-              e.PreviousSelectedTab.Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.False;
-
-            if (e.Tab != null)
-              e.Tab.Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.True;
-        }
-
-        public void AddModule(IEmbeddedModule module)
-        {
-            if (module == null)
+            if (module == null || parent == null)
                 return;
 
             //Add a new tabpage for the module
@@ -44,8 +29,8 @@ namespace WinFormsMod
             tabControl.Controls.Add(pnl);
             pnl.Dock = DockStyle.Fill;
 
-            ultraTabControl1.Tabs.AddRange(new UltraTab[] { tab });
-            ultraTabControl1.Controls.Add(tabControl);
+            parent.ultraTabControl1.Tabs.AddRange(new UltraTab[] { tab });
+            parent.ultraTabControl1.Controls.Add(tabControl);
 
             //Add a new button in home page for the module            
             var tile = new UltraTile(module.Name);
@@ -60,7 +45,19 @@ namespace WinFormsMod
             {
                 tab.Selected = true;
             };
-            ultraTilePanel1.Tiles.Add(tile);
+            parent.ultraTilePanel1.Tiles.Add(tile);
+        }
+
+        public void ChangeCaptionOfSelectedTab(SelectedTabChangedEventArgs e)
+        {
+            if (e == null)
+                return;
+
+            if (e.PreviousSelectedTab != null)
+                e.PreviousSelectedTab.Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.False;
+
+            if (e.Tab != null)
+                e.Tab.Appearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.True;
         }
     }
 }

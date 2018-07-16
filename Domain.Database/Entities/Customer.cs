@@ -17,5 +17,8 @@ namespace Domain.Database
         [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Age { get; set; }
+
+        [Column(Order = 3)]
+        public string Continent { get; set; }       
     }
 }

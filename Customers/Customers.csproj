@@ -32,7 +32,9 @@
   <ItemGroup>
     <Reference Include="Infragistics4.Shared.v18.1, Version=18.1.20181.88, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="Infragistics4.Win.Misc.v18.1, Version=18.1.20181.88, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.88, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.v18.1, Version=18.1.20181.88, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -51,6 +53,17 @@
     <Compile Include="Logic\CustomerLogic.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddCustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddCustomerView.Designer.cs">
+      <DependentUpon>AddCustomerView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CustomersView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -63,17 +76,34 @@
       <Project>{2503BA56-B462-4303-B8F7-83FE9CFD74EE}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Domain.Database\Domain.Database.csproj">
+      <Project>{e93910b8-6320-45ab-b720-3e90de983709}</Project>
+      <Name>Domain.Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddCustomerView.resx">
+      <DependentUpon>AddCustomerView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomersView.resx">
       <DependentUpon>CustomersView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="buying.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Images\customers.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Domain.Database.Customer.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

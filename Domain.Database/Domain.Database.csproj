@@ -52,13 +52,19 @@
     <Compile Include="Context\BloggingContext.cs" />
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Interfaces\ICustomerRepository.cs" />
     <Compile Include="Migrations\201807121132561_firstMigration.cs" />
     <Compile Include="Migrations\201807121132561_firstMigration.Designer.cs">
       <DependentUpon>201807121132561_firstMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807161059344_Customers_NewColumnAdded.cs" />
+    <Compile Include="Migrations\201807161059344_Customers_NewColumnAdded.Designer.cs">
+      <DependentUpon>201807161059344_Customers_NewColumnAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\ISupplierRepository.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\SupplierRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +74,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807121132561_firstMigration.resx">
       <DependentUpon>201807121132561_firstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807161059344_Customers_NewColumnAdded.resx">
+      <DependentUpon>201807161059344_Customers_NewColumnAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

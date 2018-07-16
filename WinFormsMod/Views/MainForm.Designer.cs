@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinTabControl.UltraTab ultraTab3 = new Infragistics.Win.UltraWinTabControl.UltraTab();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             this.ultraTabPageControl3 = new Infragistics.Win.UltraWinTabControl.UltraTabPageControl();
             this.ultraTilePanel1 = new Infragistics.Win.Misc.UltraTilePanel();
             this.ultraTabControl1 = new Infragistics.Win.UltraWinTabControl.UltraTabControl();
@@ -54,8 +56,8 @@
             // 
             // ultraTilePanel1
             // 
-            appearance6.BackColor = System.Drawing.Color.Thistle;
-            this.ultraTilePanel1.Appearance = appearance6;
+            appearance1.BackColor = System.Drawing.Color.Thistle;
+            this.ultraTilePanel1.Appearance = appearance1;
             this.ultraTilePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ultraTilePanel1.Location = new System.Drawing.Point(0, 0);
             this.ultraTilePanel1.Name = "ultraTilePanel1";
@@ -78,11 +80,17 @@
             this.ultraTabControl1.Size = new System.Drawing.Size(1109, 487);
             this.ultraTabControl1.TabIndex = 0;
             this.ultraTabControl1.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.LeftTop;
-            appearance4.BackColor = System.Drawing.Color.Thistle;
+            appearance4.BackColor = System.Drawing.Color.White;
+            appearance4.BackColor2 = System.Drawing.Color.White;
+            appearance4.ForeColor = System.Drawing.Color.Black;
             ultraTab3.ActiveAppearance = appearance4;
-            appearance5.BackColor = System.Drawing.Color.Thistle;
-            appearance5.BackColor2 = System.Drawing.Color.Thistle;
+            appearance5.BackColor = System.Drawing.Color.White;
+            appearance5.BackColor2 = System.Drawing.Color.White;
             ultraTab3.Appearance = appearance5;
+            appearance6.BackColor = System.Drawing.Color.White;
+            ultraTab3.HotTrackAppearance = appearance6;
+            appearance7.BackColor = System.Drawing.Color.White;
+            ultraTab3.HotTrackSelectedAppearance = appearance7;
             ultraTab3.Key = "Home";
             ultraTab3.TabPage = this.ultraTabPageControl3;
             ultraTab3.Text = "Home";
@@ -113,11 +121,10 @@
         }
 
         #endregion
-
-        private Infragistics.Win.UltraWinTabControl.UltraTabControl ultraTabControl1;
         private Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage ultraTabSharedControlsPage1;
         private Infragistics.Win.UltraWinTabControl.UltraTabPageControl ultraTabPageControl3;
-        private Infragistics.Win.Misc.UltraTilePanel ultraTilePanel1;
+        public Infragistics.Win.UltraWinTabControl.UltraTabControl ultraTabControl1;
+        public Infragistics.Win.Misc.UltraTilePanel ultraTilePanel1;
     }
 }
 
