@@ -95,9 +95,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\AddIcon.png" />
+    <Content Include="Images\Europe.png" />
+    <Content Include="Images\NordAmerica.png" />
     <EmbeddedResource Include="buying.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="Images\Africa.png" />
     <Content Include="Images\customers.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -28,51 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomersView));
-            this.africaButton = new System.Windows.Forms.Button();
-            this.europeButton = new System.Windows.Forms.Button();
-            this.nordAmericaButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.nordAmericaButton = new System.Windows.Forms.Button();
+            this.europeButton = new System.Windows.Forms.Button();
+            this.africaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // africaButton
+            // button4
             // 
-            this.africaButton.BackColor = System.Drawing.Color.SlateBlue;
-            this.africaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.africaButton.ForeColor = System.Drawing.Color.White;
-            this.africaButton.Image = ((System.Drawing.Image)(resources.GetObject("africaButton.Image")));
-            this.africaButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.africaButton.Location = new System.Drawing.Point(18, 14);
-            this.africaButton.Name = "africaButton";
-            this.africaButton.Size = new System.Drawing.Size(197, 165);
-            this.africaButton.TabIndex = 3;
-            this.africaButton.Text = "Africa";
-            this.africaButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.africaButton.UseVisualStyleBackColor = false;
-            this.africaButton.Click += new System.EventHandler(this.africaButton_Click);
-            // 
-            // europeButton
-            // 
-            this.europeButton.BackColor = System.Drawing.Color.SlateBlue;
-            this.europeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.europeButton.ForeColor = System.Drawing.Color.White;
-            this.europeButton.Image = ((System.Drawing.Image)(resources.GetObject("europeButton.Image")));
-            this.europeButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.europeButton.Location = new System.Drawing.Point(259, 14);
-            this.europeButton.Name = "europeButton";
-            this.europeButton.Size = new System.Drawing.Size(197, 165);
-            this.europeButton.TabIndex = 4;
-            this.europeButton.Text = "Europe";
-            this.europeButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.europeButton.UseVisualStyleBackColor = false;
-            this.europeButton.Click += new System.EventHandler(this.europeButton_Click);
+            this.button4.BackColor = System.Drawing.Color.SlateBlue;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Customers.Properties.Resources.AddIcon1;
+            this.button4.Location = new System.Drawing.Point(259, 216);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(197, 165);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Add Customers";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.addCustomers_Click);
             // 
             // nordAmericaButton
             // 
             this.nordAmericaButton.BackColor = System.Drawing.Color.SlateBlue;
             this.nordAmericaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nordAmericaButton.ForeColor = System.Drawing.Color.White;
-            this.nordAmericaButton.Image = ((System.Drawing.Image)(resources.GetObject("nordAmericaButton.Image")));
+            this.nordAmericaButton.Image = global::Customers.Properties.Resources.NordAmerica;
             this.nordAmericaButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.nordAmericaButton.Location = new System.Drawing.Point(18, 216);
             this.nordAmericaButton.Name = "nordAmericaButton";
@@ -83,20 +65,37 @@
             this.nordAmericaButton.UseVisualStyleBackColor = false;
             this.nordAmericaButton.Click += new System.EventHandler(this.nordAmericaButton_Click);
             // 
-            // button4
+            // europeButton
             // 
-            this.button4.BackColor = System.Drawing.Color.SlateBlue;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(259, 216);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(197, 165);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Add Customers";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.addCustomers_Click);
+            this.europeButton.BackColor = System.Drawing.Color.SlateBlue;
+            this.europeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.europeButton.ForeColor = System.Drawing.Color.White;
+            this.europeButton.Image = global::Customers.Properties.Resources.Europe;
+            this.europeButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.europeButton.Location = new System.Drawing.Point(259, 14);
+            this.europeButton.Name = "europeButton";
+            this.europeButton.Size = new System.Drawing.Size(197, 165);
+            this.europeButton.TabIndex = 4;
+            this.europeButton.Text = "Europe";
+            this.europeButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.europeButton.UseVisualStyleBackColor = false;
+            this.europeButton.Click += new System.EventHandler(this.europeButton_Click);
+            // 
+            // africaButton
+            // 
+            this.africaButton.BackColor = System.Drawing.Color.SlateBlue;
+            this.africaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.africaButton.ForeColor = System.Drawing.Color.White;
+            this.africaButton.Image = global::Customers.Properties.Resources.Africa;
+            this.africaButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.africaButton.Location = new System.Drawing.Point(18, 14);
+            this.africaButton.Name = "africaButton";
+            this.africaButton.Size = new System.Drawing.Size(197, 165);
+            this.africaButton.TabIndex = 3;
+            this.africaButton.Text = "Africa";
+            this.africaButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.africaButton.UseVisualStyleBackColor = false;
+            this.africaButton.Click += new System.EventHandler(this.africaButton_Click);
             // 
             // CustomersView
             // 
