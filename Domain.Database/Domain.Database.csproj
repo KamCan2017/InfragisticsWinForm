@@ -53,6 +53,8 @@
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
+    <Compile Include="Mapper\SupplierMapper.cs" />
+    <Compile Include="Mapper\CustomerMapper.cs" />
     <Compile Include="Migrations\201807121132561_firstMigration.cs" />
     <Compile Include="Migrations\201807121132561_firstMigration.Designer.cs">
       <DependentUpon>201807121132561_firstMigration.cs</DependentUpon>
@@ -78,6 +80,12 @@
     <EmbeddedResource Include="Migrations\201807161059344_Customers_NewColumnAdded.resx">
       <DependentUpon>201807161059344_Customers_NewColumnAdded.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2503ba56-b462-4303-b8f7-83fe9cfd74ee}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,4 @@
 ﻿using Customers.Logic;
-using Domain.Database;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -9,6 +8,7 @@ namespace Customers.Views
     public partial class AddCustomerView : Form
     {
         private CustomerLogic _customerLogic;
+
         public AddCustomerView()
         {
             InitializeComponent();
@@ -22,14 +22,12 @@ namespace Customers.Views
 
         private async void save_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer()
-            {
-                Name = textBox1.Text,
-                Age = (int)numericUpDown1.Value,
-                Continent = (string)comboBox1.SelectedItem
-            };
+            var customer = _customerLogic.Mapper.Create();
+            customer.Name = textBox1.Text;
+            customer.Age = (int)numericUpDown1.Value;
+            customer.Continent = (string)comboBox1.SelectedItem;
 
-            if(!_customerLogic.IsModelValid(customer))
+            if (!_customerLogic.IsModelValid(customer))
             {
                 MessageBox.Show("Invalid Inputs", "Error", MessageBoxButtons.OK);
                 return;

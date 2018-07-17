@@ -1,4 +1,6 @@
-﻿using Domain.Database;
+﻿using Common.Dtos;
+using Common.Interfaces;
+using Domain.Database;
 using Domain.Database.Interfaces;
 using Domain.Database.Repositories;
 using System.Collections.Generic;
@@ -15,6 +17,8 @@ namespace Customers.Logic
             _customerRepository = new CustomerRepository();
         }
 
+        public IBaseMapper<Customer, CustomerDto> Mapper { get { return _customerRepository.Mapper; } }
+
         public void OpenCustomerEu()
         {
             System.Windows.Forms.MessageBox.Show("Europe customers", "Customers", System.Windows.Forms.MessageBoxButtons.OK);
@@ -30,17 +34,17 @@ namespace Customers.Logic
             System.Windows.Forms.MessageBox.Show("Africa customers", "Customers", System.Windows.Forms.MessageBoxButtons.OK);
         }
 
-        public async Task<IEnumerable<Customer>> LoadCustomers()
+        public async Task<IEnumerable<CustomerDto>> LoadCustomers()
         {
             return await _customerRepository.FindAllAsync();
         }
 
-        public async Task<Customer> SaveCustomer(Customer model)
+        public async Task<CustomerDto> SaveCustomer(CustomerDto model)
         {
             return await _customerRepository.SaveAsync(model);
         }
 
-        public bool IsModelValid(Customer customer)
+        public bool IsModelValid(CustomerDto customer)
         {
             if (customer == null)
                 return false;

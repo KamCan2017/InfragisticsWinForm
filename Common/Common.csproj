@@ -43,8 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\Continent.cs" />
+    <Compile Include="Dtos\Customer.cs" />
+    <Compile Include="Dtos\Supplier.cs" />
+    <Compile Include="Interfaces\IBaseMapper.cs" />
     <Compile Include="Interfaces\IModule.cs" />
+    <Compile Include="Mapper\BaseMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

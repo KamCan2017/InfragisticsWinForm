@@ -1,4 +1,4 @@
-﻿using Domain.Database;
+﻿using Common.Dtos;
 using Domain.Database.Interfaces;
 using Domain.Database.Repositories;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace Suppliers.Logic
             _supplierRepository = new SupplierRepository();
         }
 
-        public async Task<IEnumerable<Supplier>> LoadSuppliers()
+        public async Task<IEnumerable<SupplierDto>> LoadSuppliers()
         {
             return await _supplierRepository.FindAllAsync();
         }

@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Suppliers.Logic;
+using System;
 using System.Windows.Forms;
 
 namespace Suppliers.Views
 {
     public partial class SuppliersView : UserControl
     {
-        private readonly Suppliers.Logic.SuppplierLogic supppliersLogic;
+        private readonly SuppplierLogic supppliersLogic;
+
         public SuppliersView()
         {
             InitializeComponent();
