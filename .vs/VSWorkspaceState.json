@@ -2,17 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Common",
-    "\\Common\\Constants",
+    "\\Common\\Interfaces",
+    "\\Common\\Mapper",
     "\\Customers",
     "\\Customers\\Logic",
+    "\\Customers\\Views",
     "\\Domain.Database",
-    "\\Domain.Database\\Entities",
     "\\Domain.Database\\Interfaces",
-    "\\Domain.Database\\Migrations",
-    "\\Settings",
-    "\\Settings\\Views",
-    "\\WinFormsMod",
-    "\\WinFormsMod\\Views"
+    "\\Domain.Database\\Mapper"
   ],
   "SelectedNode": "\\Customers\\Views\\AddCustomerView.cs",
   "PreviewInSolutionExplorer": false

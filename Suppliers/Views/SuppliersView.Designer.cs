@@ -40,12 +40,64 @@
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.reloadButton = new System.Windows.Forms.Button();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.label2 = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
             this.SuspendLayout();
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Thistle;
+            this.panel1.Controls.Add(this.addButton);
+            this.panel1.Controls.Add(this.deleteButton);
+            this.panel1.Controls.Add(this.reloadButton);
+            this.panel1.Location = new System.Drawing.Point(3, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1134, 69);
+            this.panel1.TabIndex = 6;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteButton.BackColor = System.Drawing.Color.SlateBlue;
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.ForeColor = System.Drawing.Color.White;
+            this.deleteButton.Location = new System.Drawing.Point(872, 29);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(10);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(123, 35);
+            this.deleteButton.TabIndex = 1;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // reloadButton
+            // 
+            this.reloadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.reloadButton.BackColor = System.Drawing.Color.SlateBlue;
+            this.reloadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reloadButton.ForeColor = System.Drawing.Color.White;
+            this.reloadButton.Location = new System.Drawing.Point(1004, 29);
+            this.reloadButton.Margin = new System.Windows.Forms.Padding(10);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(123, 35);
+            this.reloadButton.TabIndex = 0;
+            this.reloadButton.Text = "Refresh";
+            this.reloadButton.UseVisualStyleBackColor = false;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+            // 
             // ultraGrid1
             // 
+            this.ultraGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance1.BackColor = System.Drawing.Color.Thistle;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -102,22 +154,49 @@
             this.ultraGrid1.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.ultraGrid1.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.ultraGrid1.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.ultraGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ultraGrid1.Location = new System.Drawing.Point(0, 0);
+            this.ultraGrid1.Location = new System.Drawing.Point(3, 93);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(1140, 509);
-            this.ultraGrid1.TabIndex = 3;
+            this.ultraGrid1.Size = new System.Drawing.Size(1134, 413);
+            this.ultraGrid1.TabIndex = 5;
             this.ultraGrid1.Text = "ultraGrid1";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.BackColor = System.Drawing.Color.Purple;
+            this.label2.Location = new System.Drawing.Point(3, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1134, 2);
+            this.label2.TabIndex = 7;
+            // 
+            // addButton
+            // 
+            this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addButton.BackColor = System.Drawing.Color.SlateBlue;
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.ForeColor = System.Drawing.Color.White;
+            this.addButton.Location = new System.Drawing.Point(737, 29);
+            this.addButton.Margin = new System.Windows.Forms.Padding(10);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(123, 35);
+            this.addButton.TabIndex = 2;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // SuppliersView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.Thistle;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ultraGrid1);
             this.Name = "SuppliersView";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Size = new System.Drawing.Size(1140, 509);
             this.Load += new System.EventHandler(this.SuppliersView_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
             this.ResumeLayout(false);
 
@@ -125,6 +204,11 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button reloadButton;
         private Infragistics.Win.UltraWinGrid.UltraGrid ultraGrid1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button addButton;
     }
 }

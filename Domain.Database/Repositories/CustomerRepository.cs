@@ -23,7 +23,7 @@ namespace Domain.Database.Repositories
 
         public async Task<CustomerDto> SaveAsync(CustomerDto dto)
         {
-            var entity = _customerMapper.Convert(dto);
+            var entity = Mapper.Convert(dto);
             entity.Id = Guid.NewGuid();
 
             using (var context = new BloggingContext())

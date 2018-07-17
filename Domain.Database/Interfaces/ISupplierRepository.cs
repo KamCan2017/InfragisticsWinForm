@@ -9,6 +9,10 @@ namespace Domain.Database.Interfaces
     {
         Task<IEnumerable<SupplierDto>> FindAllAsync();
 
+        Task<bool> DeleteAsync(SupplierDto dto);
+
+        Task<SupplierDto> SaveAsync(SupplierDto dto);
+
         IBaseMapper<Supplier, SupplierDto> Mapper { get; }
     }
 }
