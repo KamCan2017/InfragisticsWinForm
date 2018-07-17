@@ -49,12 +49,23 @@ namespace Customers.Logic
             if (customer == null)
                 return false;
 
-            if (string.IsNullOrEmpty(customer.Name) || string.IsNullOrEmpty(customer.Continent))
+            if (string.IsNullOrEmpty(customer.Name) || string.IsNullOrWhiteSpace(customer.Name) || string.IsNullOrEmpty(customer.Continent))
                 return false;
 
             if (customer.Age < 18)
                 return false;
 
+            return true;
+        }
+
+        public bool ValidCustomerTextInput(string text, out string errorMsg)
+        {
+            if (string.IsNullOrEmpty(text) || string.IsNullOrWhiteSpace(text))
+            {
+                errorMsg = "empty input not allow!";
+                return false;
+            }
+            errorMsg = "";
             return true;
         }
     }

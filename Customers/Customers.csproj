@@ -107,6 +107,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\Common.Dtos.CustomerDto.datasource" />
     <None Include="Properties\DataSources\Domain.Database.Customer.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
