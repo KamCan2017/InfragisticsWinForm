@@ -35,11 +35,11 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.customerDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            this.customerDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -129,6 +129,10 @@
             this.textBox1.Size = new System.Drawing.Size(315, 25);
             this.textBox1.TabIndex = 4;
             // 
+            // customerDtoBindingSource
+            // 
+            this.customerDtoBindingSource.DataSource = typeof(Common.Dtos.CustomerDto);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -170,10 +174,6 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.save_Click);
             // 
-            // customerDtoBindingSource
-            // 
-            this.customerDtoBindingSource.DataSource = typeof(Common.Dtos.CustomerDto);
-            // 
             // customerBindingSource
             // 
             this.customerBindingSource.DataSource = typeof(Domain.Database.Customer);
@@ -185,7 +185,7 @@
             this.ClientSize = new System.Drawing.Size(536, 427);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(554, 474);
-            this.MinimumSize = new System.Drawing.Size(454, 374);
+            this.MinimumSize = new System.Drawing.Size(554, 474);
             this.Name = "AddCustomerView";
             this.Text = "Add Customer";
             this.panel1.ResumeLayout(false);
